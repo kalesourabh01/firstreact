@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/navbar';
+import FormExample from './Components/FormExample';
 
 class Header extends Component {
   render() {
@@ -23,6 +24,10 @@ class Header extends Component {
           <li className="nav-item mx-0 mx-lg-1">
             <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
           </li>
+          <li>
+          <button type="button" class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#myModal">Sign up</button>
+          </li>
+          
         </ul>
       </div>
     </div>
@@ -201,8 +206,30 @@ class About extends React.Component {
             <div id="success"></div>
             <div class="form-group">
               <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+              
             </div>
           </form>
+
+          <div className="modal fade" id="myModal" role="dialog">
+    <div className="modal-dialog">
+    
+     
+      <div className="modal-content">
+        <div className="modal-header">
+          <button type="button" className="close" data-dismiss="modal">&times;</button>
+          <h4 className="modal-title">Modal Header</h4>
+        </div>
+        <div className="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div className="modal-footer">
+          <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
         </div>
       </div>
     </div>
@@ -287,12 +314,16 @@ class App extends React.Component {
   render() {
      return (
         <div>
-           <Header/>
+            {/* <Header/>
            <Head/>
            <Portfolio/>
            <About/>
            <Contact/>
-           <Footer/><Base/>
+           <Footer/>
+           <Base/> */}
+           {/*<Navbar name='Header'></Navbar>*/}
+           <FormExample/>
+
         </div>
      );
   }
