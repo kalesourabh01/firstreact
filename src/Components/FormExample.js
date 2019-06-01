@@ -6,7 +6,9 @@ class FormExample extends Component {
     super();
     this.state={
       fname:"",
-      lname:""
+      lname:"",
+      contact:"",
+      city:""
     }
   }
 
@@ -16,6 +18,7 @@ class FormExample extends Component {
 
   handleChange =(event)=>{
     this.setState({fname: event.target.value});
+    console.log(event.target.value);
   }
 
    render(){
@@ -23,8 +26,14 @@ class FormExample extends Component {
       <div>
         <form onSubmit={this.handleclick}>
       <label> First name</label>
-      <input type="text" name="fname" value={this.state.fname} onChange={this.handleChange}/>
-      <input type="submit" value="Submit" name="submit" />
+      <input type="text" name="fname" value={this.state.fname} onChange={this.handleChange}/> <br/>
+      <label> last name</label>
+      <input type="text" name="lname" value={this.state.lname} onChange={this.handleChange}/><br/>
+      <label> Contact</label>
+      <input type="text" name="contact" value={this.state.contact} onChange={this.handleChange}/><br/>
+      <label> City</label>
+      <input type="text" name="city" value={this.state.city} onChange={this.handleChange}/><br/>
+      {/* <input type="submit" value="Submit" name="submit" /> */}
         </form>
           
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Components/navbar';
 import FormExample from './Components/FormExample';
+import FetchData from './Components/FetchData';
 
 class Header extends Component {
   render() {
@@ -314,15 +315,16 @@ class App extends React.Component {
   render() {
      return (
         <div>
-            {/* <Header/>
+             {/* <Header/>
            <Head/>
            <Portfolio/>
            <About/>
            <Contact/>
            <Footer/>
-           <Base/> */}
+           <Base/>  */}
            {/*<Navbar name='Header'></Navbar>*/}
-           <FormExample/>
+            {/* <FormExample/> */}
+            <FetchData/>
 
         </div>
      );
